@@ -1,6 +1,6 @@
 package decoratorPattern;
 
-import adapterPattern.Quackable;
+import abstractFactoryPattern.Quackable;
 
 public class QuackCounter implements Quackable {
     Quackable duck;

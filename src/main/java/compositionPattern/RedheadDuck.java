@@ -1,4 +1,4 @@
-package adapterPattern;
+package compositionPattern;
 
 public class RedheadDuck implements Quackable {
 

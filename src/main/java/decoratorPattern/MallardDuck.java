@@ -1,4 +1,4 @@
-package adapterPattern;
+package decoratorPattern;
 
 public class MallardDuck implements Quackable {
     public void quack() {

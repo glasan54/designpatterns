@@ -1,4 +1,4 @@
-package adapterPattern;
+package compositionPattern;
 
 public class RubberDuck implements Quackable {
 
