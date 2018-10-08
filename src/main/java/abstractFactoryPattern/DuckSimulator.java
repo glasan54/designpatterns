@@ -9,10 +9,10 @@ public class DuckSimulator {
         simulator.simulate();
     }
     private void simulate() {
-        Quackable mallardDuck = new QuackCounter(new MallardDuck());
-        Quackable redheadDuck = new QuackCounter(new RedheadDuck());
-        Quackable duckCall = new QuackCounter(new DuckCall());
-        Quackable rubberDuck = new QuackCounter(new RubberDuck());
+        Quackable mallardDuck = new MallardDuck();
+        Quackable redheadDuck = new RedheadDuck();
+        Quackable duckCall = new DuckCall();
+        Quackable rubberDuck = new RubberDuck();
         Quackable gooseDuck = new GooseAdapter(new Goose());
         Quackable pigeonDuck = new PigeonAdapter(new Pigeon());
 
