@@ -15,4 +15,6 @@ public class QuackCounter implements Quackable {
     public static int getQuacks() {
         return numberOfQuacks;
     }
+
+    public void reQuacks(){numberOfQuacks = 0;}
 }

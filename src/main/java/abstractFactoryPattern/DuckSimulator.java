@@ -4,15 +4,21 @@ package abstractFactoryPattern;
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
-        AbstractDuckFactory duckFactory = new CountingDuckFactory();
+        AbstractDuckFactory countingDuckFactory = new CountingDuckFactory();
+        AbstractDuckFactory originDuckFactory = new OriginDuckFactory();
+        AbstractDuckFactory echoDuckFactory = new EchoDuckFactory();
 
-        simulator.simulate(duckFactory);
+        simulator.simulate(countingDuckFactory);
+        simulator.simulate(originDuckFactory);
+        simulator.simulate(echoDuckFactory);
     }
     private void simulate(AbstractDuckFactory duckFactory) {
         Quackable mallardDuck = duckFactory.createMallardDuck();
         Quackable redheadDuck = duckFactory.createRedheadDuck();
         Quackable duckCall = duckFactory.createDuckCall();
         Quackable rubberDuck = duckFactory.createRubberDuck();
+
+
         Quackable gooseDuck = new GooseAdapter(new Goose());
         Quackable pigeonDuck = new PigeonAdapter(new Pigeon());
 
