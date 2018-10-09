@@ -1,7 +1,5 @@
 package abstractFactoryPattern;
 
-import decoratorPattern.Quackable;
-
 public class QuackCounter implements Quackable {
     Quackable duck;
     static int numberOfQuacks;
