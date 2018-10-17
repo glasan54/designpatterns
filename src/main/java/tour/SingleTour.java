@@ -7,6 +7,10 @@ public class SingleTour implements Tour {
     private int allSeats;
     private int reservedSeats;
 
+    public SingleTour(String name,int price,int sit,int reservedSeats){
+
+    }
+
     public String getName() {
         return null;
     }

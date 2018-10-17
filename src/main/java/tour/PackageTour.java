@@ -7,6 +7,16 @@ public class PackageTour implements Tour {
 
     private String packageName;
     private List<Tour> tours = new ArrayList<Tour>();
+    private int availableSeats;
+
+    public PackageTour(String packageName){
+        this.packageName = packageName;
+    }
+
+    public void addTours(Tour tour){
+        tours.add(tour);
+
+    }
 
 
     @Override
