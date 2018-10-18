@@ -19,7 +19,7 @@ public class PackageTour implements Tour {
     public void addTours(Tour tour){
         tours.add(tour);
         seats.add(tour.getAvailableSeats());
-        availableSeats =  seats.indexOf(Collections.min(seats));
+        availableSeats =  Collections.min(seats);
     }
 
 
@@ -29,6 +29,12 @@ public class PackageTour implements Tour {
         for (Tour t : tours)
             total += t.getPrice();
         return total*0.9;
+    }
+
+    public void getTourName(){
+        for (Tour i : tours){
+            System.out.print(i.getName() + ".\n");
+        }
     }
 
 
