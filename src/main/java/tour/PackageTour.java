@@ -1,12 +1,15 @@
 package tour;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class PackageTour implements Tour {
 
     private String packageName;
     private List<Tour> tours = new ArrayList<Tour>();
+    private List<Integer> seats = new ArrayList<Integer>();
     private int availableSeats;
 
     public PackageTour(String packageName){
@@ -15,7 +18,8 @@ public class PackageTour implements Tour {
 
     public void addTours(Tour tour){
         tours.add(tour);
-
+        seats.add(tour.getAvailableSeats());
+        availableSeats =  seats.indexOf(Collections.min(seats));
     }
 
 
@@ -34,6 +38,6 @@ public class PackageTour implements Tour {
 
 
     public int getAvailableSeats() {
-        return 0;
+        return availableSeats;
     }
 }

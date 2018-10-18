@@ -8,18 +8,34 @@ public class SingleTour implements Tour {
     private int reservedSeats;
 
     public SingleTour(String name,int price,int sit,int reservedSeats){
+        this.name = name;
+        this.price = price;
+        allSeats = sit;
+        this.reservedSeats = reservedSeats;
 
+    }
+
+    public void setAllSeats(int allSeats) {
+        this.allSeats = allSeats;
+    }
+
+    public void setReservedSeats(int reservedSeats) {
+        this.reservedSeats = reservedSeats;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public double getPrice() {
-        return 0;
+        return price;
     }
 
     public int getAvailableSeats() {
-        return 0;
+        return allSeats;
+    }
+
+    public int getReservedSeats() {
+        return reservedSeats;
     }
 }
